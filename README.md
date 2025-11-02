@@ -1,0 +1,3 @@
+# Faker toy example for the Software Testing course seminar
+
+...
