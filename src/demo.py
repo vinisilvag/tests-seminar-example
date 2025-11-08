@@ -10,9 +10,9 @@ class LLMProvider(BaseProvider):
 def main():
     fake = Faker()
     # fake.seed_instance(42)
-    # fake = Faker(["pt_BR", "ja_JP"])
+    # fake = Faker(["pt_BR"])
 
-    # Basics
+    ## Basics
     print(fake.name())
     print(fake.address())
     print(fake.email())
@@ -66,9 +66,9 @@ def main():
     print(names[:8], len(names))
     assert len(set(names)) == len(names)
 
-    # for i in range(3):
-    # Raises a UniquenessException
-    # fake.unique.boolean()
+    for i in range(3):
+        # Raises a UniquenessException
+        fake.unique.boolean()
 
 
 if __name__ == "__main__":

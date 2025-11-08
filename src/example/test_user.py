@@ -2,12 +2,12 @@ from datetime import datetime
 
 import pytest
 
-# from data_factory import make_user
+from data_factory import make_user
 from user import User
 
 
 def test_deposit_increases_balance(fake):
-    user = User(fake.name(), fake.email(), fake.cpf(), fake.cellphone_number(), 100.0)
+    user = make_user(100.0)
     initial_balance = user.balance
     user.deposit(200.50)
     assert user.balance == pytest.approx(initial_balance + 200.50)
